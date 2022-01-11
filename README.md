@@ -30,15 +30,21 @@ Now edit the pvc configuration file
 
 ` kubectl edit pvc pvcname `
 
- resources:
-    requests:
-      storage: 30Gi > increase to whatever required size
+go to below section in the file
+
+
+  resources:
+  
+      requests:
+      
+           storage: 30Gi > increase to whatever required size
+           
 
 Now after some time we can see PVC size got increased
 
-verify with kubectl get pvc pvcname
+verify with  ` kubectl get pvc pvcname `
 
-Now scale up the deployment replca to earlier value
+Now scale up the deployment replica to previous value
 
 ` kubectl scale deployment deploymentname --replicas=0 -n namespace `
 
