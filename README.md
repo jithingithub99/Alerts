@@ -16,9 +16,9 @@ Verify which storage class it belongs to.Confirm "AllowVolumeExpansion" is set t
 
 ` kubectl describe sc storageclassname `
 
-check whether this pod is controlled by any replciaset or deployment
+check whether this pod is controlled by any replicaset or deployment
 
-` kubectl describe pod podname `
+` kubectl describe pod podname `   (refer the line ## controlled by ##  )
 
 ` kubectl describe deployment deploymentname ` (run if the pod is controlled by deployment)
 
