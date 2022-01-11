@@ -1,10 +1,10 @@
-### Alert ###
+### Alerts ###
 
 #### KubePersistentVolumeUsageCritical #####
 #### KubePersistentVolumeFullInFourDays #####
 
 
-This alert is due to  low disk space issue in the pvc.We will have to increase the PVC size
+These alerts are due to  low disk space issue in the pvc.We will have to increase the PVC size
 
 First get the pvc details.
 
@@ -18,7 +18,7 @@ Verify which storage class it belongs to.Confirm "AllowVolumeExpansion" is set t
 
 check whether this pod is controlled by any replicaset or deployment
 
-` kubectl describe pod podname `   (refer the line ## controlled by ##  )
+` kubectl describe pod podname `   (refer the line ##controlled by##  )
 
 ` kubectl describe deployment deploymentname ` (run if the pod is controlled by deployment)
 
