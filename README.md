@@ -40,4 +40,6 @@ verify with kubectl get pvc pvcname
 
 Now scale up the deployment replca to earlier value
 
+` kubectl scale deployment deploymentname --replicas=0 -n namespace `
+
 verify pod is running fine
