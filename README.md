@@ -193,3 +193,9 @@ With the 2.18 release of KKP, the nodeport proxy will get an additional anti-aff
 
 
 ##### 8) KubePodNotReady #####
+
+##### 9) PromScrapeFailed #####
+
+##### 10) KubeAPILatencyHigh #####
+
+
