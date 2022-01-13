@@ -133,7 +133,10 @@ Login to velero pod and run below command to check the backups
 
 `./velero backup get  |more`
 
-check the status of velero backups whether completed or not (screenshot already taken)
+check the status of velero backups whether completed or not 
+
+![image](https://user-images.githubusercontent.com/89779991/149271282-160a87d4-7c53-43e0-bf64-11a8d6ba3648.png)
+
 
 Check the KKP version, if it is  < 2.18 env we can  delete the partial failed backups
 
