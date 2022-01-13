@@ -33,11 +33,13 @@ Now edit the pvc configuration file
 go to below section in the file
 
 
+  ``` 
   resources:
   
       requests:
       
            storage: 30Gi > increase to whatever required size
+```
            
 
 Now after some time we can see PVC size got increased
