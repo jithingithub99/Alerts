@@ -179,5 +179,17 @@ tcp [::1]:9090: connect: connection refused
 creation and this could be reason for no heartbeat from that particular pod for some time (average 
 value of 300s) and it gets fixed automatically when the old pod is killed
 
-#### 7) KubePodNotReady #####
+#### 7) User Cluster API Client disconnects #####
 
+This issue could be caused by:
+1. high number of restarts of the API server of the cluster nl2x8h2mpf , seams to less "reserved" cpu / memory.
+we can increase cluster component resource limits for this cluster
+
+2. The nodeport-proxy envoy has no resource limits set (is kind of the ingress for all api server calls), this potential
+leads also to some delays or connection drops if this pod or node is under pressure and we can't ensure the cpu/memory for it in the current Version.
+
+Therefor we update the PROD environment to an already present bugfix release 2.17.5. As their are only a few bugfix changes in the release and no feature/migration triggered we don't expect any Problem. 
+With the 2.18 release of KKP, the nodeport proxy will get an additional anti-affinity to spread the pods across multiple nodes and zones,
+
+
+##### 8) KubePodNotReady #####
