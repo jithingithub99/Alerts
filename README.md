@@ -1,7 +1,7 @@
 ### Alerts ###
 
-#### KubePersistentVolumeUsageCritical #####
-#### KubePersistentVolumeFullInFourDays #####
+#### 1) KubePersistentVolumeUsageCritical #####
+#### 2) KubePersistentVolumeFullInFourDays #####
 
 
 These alerts are due to  low disk space issue in the pvc.We will have to increase the PVC size
