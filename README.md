@@ -179,3 +179,5 @@ tcp [::1]:9090: connect: connection refused
 creation and this could be reason for no heartbeat from that particular pod for some time (average 
 value of 300s) and it gets fixed automatically when the old pod is killed
 
+#### 7) KubePodNotReady #####
+
