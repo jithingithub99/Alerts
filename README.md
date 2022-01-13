@@ -153,4 +153,29 @@ verify all velero backups
 `velero backup list`
 
 
+#### 6) ThanosSidecarNoHeartbeat #####
+
+This  alert is coming when container Thanos trying to access the pod Prometheus it is getting a connection refused error.
+
+we will have to check pod logs
+
+`kubectl get logs `
+
+```
+2021-11-11T10:11:40.912346609Z stderr F level=error ts=2021-11-11T10:11:40.912200097Z 
+caller=runutil.go:99 component=reloader msg="function failed. Retrying in next tick" 
+err="trigger reload: reload request failed: Post \"http://localhost:9090/-/reload\": dial 
+tcp [::1]:9090: connect: connection refused
+
+```
+
+ From the logs we could see that there are 2-3 warnings says health check service sending SIGTERM signal, and the pod exists gracefully.
+ 
+ `2021-11-11 15:40:47 msg="Received SIGTERM, exiting gracefully..." `
+ 
+ ` 2021-11-11 15:40:47 msg="changing probe status" `
+ 
+ Here the pod which was supposed to get terminated was continuing even after the new pod 
+creation and this could be reason for no heartbeat from that particular pod for some time (average 
+value of 300s) and it gets fixed automatically when the old pod is killed
 
