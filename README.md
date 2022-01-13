@@ -52,7 +52,7 @@ Now scale up the deployment replica to previous value
 
 verify pod is running fine
 
-#### 1) KubePodOOMKilled #####
+#### 3) KubePodOOMKilled #####
 
 Sometimes if users run extensive workload at their cluster, it could happen that the default resource limits are not enough. So for this it's needed to potential override the default resource limits of the user cluster.
 
@@ -120,7 +120,10 @@ Verify the pod status by running below command
 `kubectl get pod -n namespace -l podname`
 
 
+
 #### 4) VeleroBackupTakesTooLong #####
+
+
 
 VeleroBackupTakesTooLong alerts is because of some failed backup job due to various reason or KKP bug  
 
