@@ -78,13 +78,13 @@ A better and constant solution is to overwrite the value at the spec.componentsO
 ` kubectl edit cluster clustername`
 
 
-apiVersion: kubermatic.k8s.io/v1
-kind: Cluster
-metadata:
-  name: xxxxx
-spec:
+ ``` apiVersion: kubermatic.k8s.io/v1
+     kind: Cluster
+     metadata:`
+     name: xxxxx  
+     spec:
   componentsOverride:
-    ####################### <<<<<<<< update
+      ####################### <<<<<<<< update
     prometheus: 
       resources:
         limits:
@@ -94,6 +94,9 @@ spec:
           cpu: 150m
           memory: 750Mi
   ####################### <<<<<<<< update
+  ```
+  
+  
 After the edit, the cluster reconciliation should automatically patch the StatefulSet and trigger a rolling deployment of the prometheus pods:
 
 `kubectl get sts stsname -o yaml | kexp`
