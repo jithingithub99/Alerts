@@ -119,9 +119,11 @@ Verify the pod status by running below command
 
 `kubectl get pod -n namespace -l podname`
 
+ #### 4) KubeDeploymentReplicasMismatch #####
+ 
+ Replica mismatche commonly happens whenever there is a pod associated with a deployment failes or not working.There could be many reason however we can check pod status and proceed.For these alerts also we can follow the same steps of KubePodOOMKilled issues.
 
-
-#### 4) VeleroBackupTakesTooLong #####
+#### 5) VeleroBackupTakesTooLong #####
 
 
 
