@@ -73,7 +73,7 @@ Note: kexp is a command of fubectl to extract the temporary status values of the
 
 As the Kubermatic cluster controller is managing the StatefulSet object, it's not possible to override the resource limits directly in the StatefulSet object. it would be possible you set the spec.pause=true, but this breaks the update and control behaviour of KKP, as pause means, to disable the cluster controller at all.
 
-A better and constant solution is to overwrite the value at the spec.componentsOverride field, similar as described for e.g. etcd in the official KKP documentation - Scaling the Control Plane.(If the pod is controlled by deployment we can directly edit deployment and update the resource linit value-make sure we scale down the replica first)
+A better and constant solution is to overwrite the value at the spec.componentsOverride field, similar as described for e.g. etcd in the official KKP documentation - Scaling the Control Plane.(If the pod is controlled by deployment we can directly edit deployment and update the resource limit & request values-make sure we scale down the replica first)
 
 ` kubectl edit cluster clustername`
 
