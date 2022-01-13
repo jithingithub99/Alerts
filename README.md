@@ -119,3 +119,30 @@ Verify the pod status by running below command
 
 `kubectl get pod -n namespace -l podname`
 
+
+#### 4) VeleroBackupTakesTooLong #####
+
+VeleroBackupTakesTooLong alerts is because of some failed backup job due to various reason or KKP bug  
+
+Login to velero pod and run below command to check the backups
+
+`./velero backup get  |more`
+
+check the status of velero backups whether completed or not (screenshot already taken)
+
+Check the KKP version, if it is  < 2.18 env we can  delete the partial failed backups
+
+`velero backup list`
+
+`velero backup delete xxxx`
+
+Delete running velero pod, then a fresh one starts and should report the right metrics.
+
+`kubectl delete pod veleropod`
+
+verify all velero backups 
+
+`velero backup list`
+
+
+
