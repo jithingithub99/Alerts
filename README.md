@@ -192,6 +192,15 @@ Therefor we update the PROD environment to an already present bugfix release 2.1
 With the 2.18 release of KKP, the nodeport proxy will get an additional anti-affinity to spread the pods across multiple nodes and zones,
 
 
+
+##### 8) VMwareHostYellowAlarm #####
+This alarm is related host running on VMWARE environment
+![image](https://user-images.githubusercontent.com/89779991/149777998-f7c4f1e1-c42e-44de-8f12-91dacff5b907.png)
+
+ We have to login to  ESXi and check the status of corresponding node/host and errors
+ 
+ 
+
 ##### 8) KubePodNotReady #####
 
 ##### 9) PromScrapeFailed #####
