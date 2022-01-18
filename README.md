@@ -244,9 +244,30 @@ Try to port forward the alert manager service to local port(make sure we connect
 open the browser locally and enter localhost:55555 and check for any errors
 
 
+##### 10) Kubejob failed #####  
+
+Some times due to various reason scheduled job may not complete within the deadline time given and it get failed
+
+in this case first we need to check the job status
+
+` kubectl get job `
 
 
-##### 10) KubeAPILatencyHigh #####  
+![image](https://user-images.githubusercontent.com/89779991/149889777-91a6ff23-cfba-411c-a4f9-39199d012336.png)
+
+describe the job whith its name space
+
+![image](https://user-images.githubusercontent.com/89779991/149890120-1bbd2fda-8a0c-4440-bc00-87ab801ef536.png)
+
+
+
+
+
+
+
+
+
+##### 11) KubeAPILatencyHigh #####  
 
 WIP (Work in progress )
 
