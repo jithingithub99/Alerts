@@ -233,10 +233,19 @@ Next step is check the service status
 
 ![image](https://user-images.githubusercontent.com/89779991/149888492-94e27719-0a49-441a-b2dc-4f31adbd109d.png)
 
+Try to port forward the alert manager service to local port(make sure we connected to vsoc kubeconfig)
+
+
+![image](https://user-images.githubusercontent.com/89779991/149888756-e18291ce-4477-4fc1-bd3b-b5aa75e144dd.png)
+
+open the browser locally and enter localhost:55555
+
+
 
 
 ##### 10) KubeAPILatencyHigh #####  
 
 WIP (Work in progress )
+
 
 
