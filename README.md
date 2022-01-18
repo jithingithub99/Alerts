@@ -205,7 +205,7 @@ This alarm is related host running on VMWARE environment
 
 we need to check why the pod is not ready by running below commands
 
-` kuebctl get po podname `
+` kuebctl get pod podname `
 
 ` kubectl describe pod podname `
 
