@@ -217,6 +217,26 @@ check out the logs mentioned in the "events"section and then troubleshoot the is
 
 ##### 9) PromScrapeFailed #####
 
-##### 10) KubeAPILatencyHigh #####
+![image](https://user-images.githubusercontent.com/89779991/149887658-f02e8403-708d-41b8-893f-dab4684c32ae.png)
+
+These alerts are due to error or no reachability with prometheus pods
+
+First we need to check wheether prometheus pod is running fine
+
+` kubectl get pod -n monitoring `  
+
+where -n monitoring is for namespace
+
+Next step is check the service status
+
+` kubectl get svc -n monitoring `
+
+![image](https://user-images.githubusercontent.com/89779991/149888492-94e27719-0a49-441a-b2dc-4f31adbd109d.png)
+
+
+
+##### 10) KubeAPILatencyHigh #####  
+
+WIP (Work in progress )
 
 
