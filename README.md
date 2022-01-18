@@ -238,7 +238,10 @@ Try to port forward the alert manager service to local port(make sure we connect
 
 ![image](https://user-images.githubusercontent.com/89779991/149888756-e18291ce-4477-4fc1-bd3b-b5aa75e144dd.png)
 
-open the browser locally and enter localhost:55555
+![image](https://user-images.githubusercontent.com/89779991/149889035-cadf0612-9293-43df-a9c1-a1c06247a7c9.png)
+
+
+open the browser locally and enter localhost:55555 and check for any errors
 
 
 
