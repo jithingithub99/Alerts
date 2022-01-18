@@ -159,7 +159,7 @@ This  alert is coming when container Thanos trying to access the pod Prometheus 
 
 we will have to check pod logs
 
-`kubectl get logs `
+`kubectl logs pod name`
 
 ```
 2021-11-11T10:11:40.912346609Z stderr F level=error ts=2021-11-11T10:11:40.912200097Z 
