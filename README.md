@@ -203,6 +203,18 @@ This alarm is related host running on VMWARE environment
 
 ##### 8) KubePodNotReady #####
 
+we need to check why the pod is not ready by running below commands
+
+` kuebctl get po podname `
+
+` kubectl describe pod podname `
+
+check out the logs mentioned in the "events"section and then troubleshoot the issue accordingly
+
+![image](https://user-images.githubusercontent.com/89779991/149873043-2f954980-5197-44ea-9648-06820d4146a6.png)
+
+
+
 ##### 9) PromScrapeFailed #####
 
 ##### 10) KubeAPILatencyHigh #####
