@@ -182,7 +182,7 @@ value of 300s) and it gets fixed automatically when the old pod is killed
 #### 7) User Cluster API Client disconnects #####
 
 This issue could be caused by:
-1. high number of restarts of the API server of the cluster nl2x8h2mpf , seams to less "reserved" cpu / memory.
+1. high number of restarts of the API server of the cluster, sees to less "reserved" cpu / memory.
 we can increase cluster component resource limits for this cluster
 
 2. The nodeport-proxy envoy has no resource limits set (is kind of the ingress for all api server calls), this potential
