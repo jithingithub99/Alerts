@@ -260,10 +260,9 @@ describe the job whith its name space
 ![image](https://user-images.githubusercontent.com/89779991/149890120-1bbd2fda-8a0c-4440-bc00-87ab801ef536.png)
 
 
+verify the reason why it got not completed and then delete the job
 
-
-
-
+` kubectl delete job jobname -n namespace `
 
 
 
